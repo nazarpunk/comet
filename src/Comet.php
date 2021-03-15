@@ -20,7 +20,7 @@ class Comet {
 	 */
 	public static function get_user_key(int $user_id): ?string {
 		if (!is_array(self::$setting)) throw new Exception('No Comet Connection param');
-		return sha1(self::$setting['user_secret'] . $user_id);
+		return md5(self::$setting['user_secret'] . $user_id);
 	}
 
 	public static function setting(
