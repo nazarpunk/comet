@@ -1,0 +1,24 @@
+{
+  "name": "nazarpunk/comet",
+  "description": "php api для comet-server.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "https://github.com/nazarpunk",
+      "email": "nazarpunk@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "ext-mysqli": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "nazarpunk\\Comet\\": "src/"
+    }
+  }
+}
