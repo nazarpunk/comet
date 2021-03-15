@@ -10,6 +10,9 @@ use mysqli;
 use Exception;
 
 class Comet {
+
+	private static array $setting;
+
 	/**
 	 * @param int $user_id
 	 * @return string|null
@@ -19,8 +22,6 @@ class Comet {
 		if (!is_array(self::$setting)) throw new Exception('No Comet Connection param');
 		return sha1(self::$setting['user_secret'] . $user_id);
 	}
-
-	private static array $setting;
 
 	public static function setting(
 		// connection
