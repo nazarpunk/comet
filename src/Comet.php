@@ -70,7 +70,7 @@ class Comet {
 	 * @throws Exception
 	 */
 	private static function json(array $data): string {
-		return self::get_connection()->real_escape_string(json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PARTIAL_OUTPUT_ON_ERROR | JSON_HEX_QUOT));
+		return self::get_connection()->real_escape_string(json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PARTIAL_OUTPUT_ON_ERROR | JSON_HEX_QUOT | JSON_HEX_APOS));
 	}
 
 	/**
@@ -89,7 +89,7 @@ class Comet {
 	}
 
 	/**
-	 * @param        $channel
+	 * @param string $channel
 	 * @param string $event
 	 * @param array  $data
 	 * @return array
